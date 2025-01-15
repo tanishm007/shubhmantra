@@ -27,7 +27,7 @@ const ProductList = () => {
 
     return (
         <div className="product-list-container">
-            <h1 className="heading">All Products</h1>
+            <h1 className="religious-heading">SHUBHMANTRA</h1>
             <div className="product-list">
                 {products.map((product) => (
                     <div

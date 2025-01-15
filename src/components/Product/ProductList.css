@@ -1,16 +1,36 @@
+@keyframes slideInOut {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
 .product-list-container {
     width: 80%;
     margin: 50px auto;
     text-align: center;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(to bottom, #fff5e1, #ffdab9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.heading {
-    font-size: 2.5rem;
-    color: #4caf50;
+.religious-heading {
+    font-size: 3rem;
+    color: #ff5722;
     margin-bottom: 30px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to right, #ffd700, #ff8c00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .product-list {
@@ -18,10 +38,12 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .product-card {
-    background: linear-gradient(135deg, #ff7f50, #ff1493);
+    background: linear-gradient(135deg, #ffd700, #ff4500);
     color: white;
     border-radius: 10px;
     padding: 20px;
@@ -29,10 +51,11 @@
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideInOut 5s linear infinite;
 }
 
 .product-card:hover {
-    transform: translateY(-10px);
+    transform: scale(1.1);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
